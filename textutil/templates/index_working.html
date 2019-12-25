@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>www.texteditor19.com</title>
+  </head>
+
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Text-Editor</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+  	<ul class="navbar-nav">
+    </ul>
+  </div>
+
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+
+</nav>
+
+<div class="alert alert-primary alert-dismissible fade show" role="alert">
+  <strong>Welcome!</strong> Please enter your text and check the checkboxes. Then simply click to GO. DONE!!!
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+
+
+
+<div class="container">			<!--Use class=container-fluid to cover the whole page-->
+
+
+
+<form name="form2" method='get' action='/go'>
+
+    <div class="form-group"><br>
+      <br>
+      <label for="exampleFormControlTextarea1">Enter your Text here...</label>
+      <textarea name="entered_text" cols="" rows="" style="margin: 0px; width: 1517px; height: 85px;"></textarea>
+    </div>
+
+
+    <div class="custom-control custom-switch">
+      <input type="checkbox" name = "removepunc" class="custom-control-input" id="customSwitch1">
+      <label class="custom-control-label" for="customSwitch1">Remove Punctuations</label>
+    </div>
+
+    <div class="custom-control custom-switch">
+      <input type="checkbox" name = "cap_all" class="custom-control-input" id="customSwitch2">
+      <label class="custom-control-label" for="customSwitch2">Capitalize All</label>
+    </div>
+
+    <div class="custom-control custom-switch">
+      <input type="checkbox" name = "countchr" class="custom-control-input" id="customSwitch3">
+      <label class="custom-control-label" for="customSwitch3">Count total Characters</label>
+    </div>
+
+    <button type="submit" class="btn btn-success mt-2">Convert it	</button>
+
+</form>
+</div>
+
+
+
+<div class="container">
+<br>
+<p class="style5">Analyzed text is :
+<form name="form1" method="post" action="">		<!--method = post displays on the Text area-->
+<textarea name="entered_text" cols="" rows="" style="margin: 0px; width: 1517px; height: 85px;">{{analyzed_text}}{{counter}}</textarea>
+</form>
+<p class="style2">
+{% comment %} <form name="form1" method="post" action="">
+  <div class="form-group"><br>
+    <label for="exampleFormControlTextarea1">Analyzed text is :</label>
+    <textarea name="entered_text" rows="5" class="form-control" id="exampleFormControlTextarea1">{{analyzed_text}}{{counter}}</textarea>
+  </div>
+</form> {% endcomment %}
+<p class="style5">
+
+</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

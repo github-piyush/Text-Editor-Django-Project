@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Index Testing</title>
+<style type="text/css">
+<!--
+.style1 {
+	color: #FFFF00;
+	font-weight: bold;
+	font-size: 36px;
+}
+body {
+	background-color: #990000;
+}
+.style2 {
+	color: #FFFFFF;
+	font-size: 18px;
+}
+.style5 {
+	color: #FFFF00;
+	font-size: 24px;
+	font-weight: bold;
+}
+-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"></head>
+<body>
+<div align="center" class="style1">WELCOME TO THE TEXT-EDITOR</div>
+<p class="style2">Please enter your text :</p>
+
+
+
+
+<form name="form2" method='get' action='/go'>      <!--method and action we have given, get method is used to get data, action is redirecting page to "go"-->
+  <span class="style2">
+  <textarea name="entered_text" cols="" rows="" style="margin: 0px; width: 1517px; height: 85px;"></textarea>
+  <input type = "checkbox" name = "removepunc"> Remove Punctuations <br>
+  <input type = "checkbox" name = "cap_all"> Capitalize All <br>
+  <input type = "checkbox" name = "countchr"> Count total Characters <br>
+  <button type = 'submit' >G0</button>
+
+	
+
+
+  
+  </span>
+  <p>&nbsp;</p>
+</form>
+
+<p class="style5">Analyzed text is :
+<form name="form1" method="post" action="">		<!--method = post displays on the Text area-->
+<textarea name="entered_text" cols="" rows="" style="margin: 0px; width: 1517px; height: 85px;">{{analyzed_text}}{{counter}}</textarea>
+</form>
+<p class="style2">
+</body>
+</html>
